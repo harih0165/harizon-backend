@@ -14,6 +14,9 @@ app.use(cors());
 app.use("/api/v1",product)
 app.use("/api/v1",order)
 
+app.use("/",(req,res)=>{
+    res.send("app running")
+})
 
 app.listen(process.env.PORT,() =>{
     console.log(`the port is running on ${process.env.PORT}`)
